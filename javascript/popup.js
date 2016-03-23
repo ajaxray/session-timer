@@ -5,29 +5,28 @@ function renderStatus(status)
     $('#status').html(status);
 }
 
-function renderSiteList()
+function renderSiteList(items)
 {
-    withWatchlist(function(items) {
-        $('#domains').empty();
-        var sessions = localStorage.getItem('runningSessions') || [];
-        if(items.length) {
-            $.each(items, function (index, value) {
-                var className = (sessions.indexOf(value) != -1) ? "list-group-item-warning" : "";
-                $('#domains').append('<a href="' + value + '" target="_blank" tabindex="-1" class="list-group-item ' + className + '">' + value + '</a>');
-            });
-        } else {
-            $('#domains').append('<a href="howto.html" target="_blank" tabindex="-1" class="list-group-item">No sites in watchlist. Click me to see how to use.</a>');
-        }
-    });
+    $('#domains').empty();
+
+    var sessions = localStorage.getItem('runningSessions') || [];
+    if(items.length) {
+        $.each(items, function (index, value) {
+            var className = (sessions.indexOf(value) != -1) ? "list-group-item-warning" : "";
+            $('#domains').append('<a href="' + value + '" target="_blank" tabindex="-1" class="list-group-item ' + className + '">' + value + '</a>');
+        });
+    } else {
+        $('#domains').append('<a href="howto.html" target="_blank" tabindex="-1" class="list-group-item">No sites in watchlist. Click me to see how to use.</a>');
+    }
 }
 
-function setWatchState(state)
+function setWatchState(list, currentUrl)
 {
-    if(state) {
-        $('#watch-state').bootstrapToggle('on');
-    } else {
-        $('#watch-state').bootstrapToggle('off');
-    }
+    $.each(list, function(i, v) {
+        if (v == currentUrl) {
+            $('#watch-state').bootstrapToggle('on');
+        }
+    });
 }
 
 
@@ -39,15 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.domain').html(domain);
     });
 
-    renderSiteList();
 
-    // Set watch state of current site
+    // Render watchlist and set state of current site
     withWatchlist(function(list) {
-        $.each(list, function(i, v) {
-            if (v == currentUrl) {
-                setWatchState(true);
-            }
-        });
+        renderSiteList(list);
+        setWatchState(list, currentUrl);
 
         // Listne to watch state toggle
         $('#watch-state').change(function() {

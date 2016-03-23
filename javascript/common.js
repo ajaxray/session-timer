@@ -42,7 +42,7 @@ function addToWatchlist(url, callback)
 
         chrome.storage.sync.set({'ajaxray.session_timer.domains': items}, function() {
             if('function' == typeof callback) {
-                callback(url, items);
+                callback(items, url);
             }
         });
     });
@@ -55,7 +55,7 @@ function removeFromWatchlist(url, callback)
 
         chrome.storage.sync.set({'ajaxray.session_timer.domains': items}, function() {
             if('function' == typeof callback) {
-                callback(url, items);
+                callback(items, url);
             }
         });
     });
