@@ -214,7 +214,7 @@ strong {
 
 header ul li + li {
   border-right:none;
-  width:89px;
+  width:134px;
 }
 
 header ul a strong {
@@ -260,6 +260,11 @@ p.lead {
 #logo {
   width: 50px;
   vertical-align: middle;
+}
+ul#menu {
+  list-style: none;
+  padding-left: 20px;
+  margin: 30px 0 20px;
 }
 
 @media print, screen and (max-width: 960px) {
@@ -324,8 +329,8 @@ p.lead {
     width:99%;
   }
 
-  header li, header ul li + li + li {
-    width:33%;
+  header li, header ul li + li {
+    width:50%;
   }
 }
 
