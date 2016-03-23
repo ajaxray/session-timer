@@ -281,6 +281,11 @@ footer {
     right:50px;
     top:52px;
   }
+
+  p.lead {
+    font-size: 18px;
+    text-align: center;
+  }
 }
 
 @media print, screen and (max-width: 720px) {
