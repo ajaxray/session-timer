@@ -1,0 +1,66 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+<head>
+    <title>Session Timer Settings</title>
+    <link href="stylesheet/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheet/style.css" rel="stylesheet">
+</head>
+
+<body class="options">
+    <div class="container">
+        <div class="header">
+            <h3><img src="img/timer.png" alt="Logo" id="logo"> Session Timer Settings</h3>
+        </div>
+
+        <div class="jumbotron" id="options-form">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="sessionLimit" class="col-sm-3 control-label">Session Limit</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="sessionLimit" placeholder="Number of Minutes">
+                        <span class="help-block small">Once opened a watching site, you'll be notified after this number of minutes.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="snoozeTime" class="col-sm-3 control-label">Snooze Time</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="snoozeTime" placeholder="Number of Minutes">
+                        <span class="help-block small">If you choose to "Snooze" in notifications, it will be reset to this number of minutes.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="button" class="btn btn-default" id="save">
+                            &#x1F6E0;Save Settings
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 small">
+                Developed by : <a href="http://ajaxray.com" target="_blank">ajaxray.com</a> <br>
+                Designed using <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a> and <a href="http://www.bootstraptoggle.com" target="_blank">bootstraptoggle</a><br>
+                Sound recorded by <a href="http://soundbible.com/1174-Buzz-Fade-In.html" target="_blank">Mike Koenig</a><br>
+                Icon (logo) by <a href="https://www.iconfinder.com/nitishkmrk">Nitish Kumar</a>
+            </div>
+        </div>
+        <br>
+        <div class="footer">
+            <p>
+                <span class="text-muted small">&copy; ajaxray.com 2016</span>
+            </p>
+        </div>
+
+    </div> <!-- /container -->
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/common.js"></script>
+    <script src="javascript/options.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Session Timer</title>
+    <link href="stylesheet/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheet/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="stylesheet/style.css" rel="stylesheet">
+</head>
+
+<body class="browser_action">
+    <div class="container">
+        <h3><img src="img/timer.png" alt="Logo" id="logo"> Session Timer</h3>
+        <hr>
+
+        <div class="list-group" id="domains"></div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10">
+                    Watching <strong><code class="domain"></code></strong>
+                </div>
+                <div class="col-xs-2 text-right">
+                    <input id="watch-state" type="checkbox" data-toggle="toggle" data-size="mini">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12" id="toolbelt">
+                    &#x1F6E0;<a href="options.html" tabindex="-1" target="_blank">settings</a>
+                    &#x1F4A1;<a href="howto.html" tabindex="-1" target="_blank">help</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/bootstrap-toggle.min.js"></script>
+    <script src="javascript/common.js"></script>
+    <script src="javascript/popup.js"></script>
+</body>
+</html>
