@@ -282,9 +282,15 @@ footer {
     top:52px;
   }
 
+  /** My Custom Styles **/
   p.lead {
     font-size: 18px;
     text-align: center;
+  }
+
+  img#logo {
+    width: 50px;
+    vertical-align: middle;
   }
 }
 
