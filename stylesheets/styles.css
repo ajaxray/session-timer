@@ -201,6 +201,7 @@ header ul a {
 
 header ul a:hover {
   color:#999;
+  background-color: #fafafa;
 }
 
 header ul a:active {
@@ -220,7 +221,8 @@ header ul li + li {
 header ul a strong {
   font-size:14px;
   display:block;
-  color:#222;
+  color:#922;
+  padding-top: 2px;
 }
 
 section {
