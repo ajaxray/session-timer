@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Session Timer (Chrome Extension) by ajaxray</title>
 
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width">
@@ -21,7 +22,11 @@
           <img src="img/timer.png" alt="Logo" id="logo">
           Session Timer
         </h1>
-        <p>A <b>Chrome Extension</b> to rescue your time by notifying at a configured time limit while browsing <i>time killing</i> sites.</p>
+        <p>
+          A <b>Chrome Extension</b> to rescue your time by notifying after
+          customizable time limit while browsing
+          <i class="text-danger">time killing</i> sites.
+        </p>
 
         <!--<p class="view"><a href="https://github.com/ajaxray/session-timer">View the Project on GitHub <small>ajaxray/session-timer</small></a></p>-->
 
@@ -43,25 +48,43 @@
         <h3>You May Ask&hellip;</h3>
 
         <h4>What does it mean by <b>watchlist</b> here?</h4>
-        <p>Answer is here...</p>
+        <p>
+          It's just a list of websites. You have to add your time killing sites to this list.
+          Then, this extension will automatically set notification timer in background when you'll open a listed site.
+        </p>
 
         <h4>How to turn off watching after adding a site in watchlist?</h4>
-        <p>Answer is here...</p>
+        <p>
+          Go to the website. Click on the Extension icon on browser toolbar.
+          Then you should see <code>watching...</code> toggle button beside the site name if it's already in watchlist.
+          Click that button to remove from watchlist. <br>
+          <img src="img/turn-off-watching.jpg" alt="Turn off Watching" class="img-thumbnail" style="width: 430px">
+        </p>
 
-        <h4>Why some items are showing yellow in watchlist?</h4>
-        <p>Answer is here...</p>
+        <h4>Why some items are showing with yellow background in watchlist?</h4>
+        <p>Showing yellow background means timer is on for this site at this moment.</p>
 
         <h4>What if I've missed or closed (by x button) the Notification?</h4>
-        <p>Answer is here...</p>
+        <p>
+          System will periodically (every 2 minutes) check for this type of missed sessions.
+          And if found one, notification will be revived for it.
+        </p>
 
-        <h4>Is it checking for time matching in every second/minute? (is it resource hungry?)</h4>
-        <p>Answer is here...</p>
+        <h4>
+          <span class="label label-primary">technical</span>
+          Is it checking for time matching at every moment? (resource hungry?)
+        </h4>
+        <p>
+          Nope! When you open a listed site, the notification time is pre-calculated and set to
+          Chromes native <a href="https://developer.chrome.com/extensions/alarms" target="_blank">Alarm API</a>.
+          And then at the right moment, when Chrome responses back, we show you the notification.
+        </p>
 
 
       </section>
       
       <footer>
-        <p>This project is maintained by <a href="https://github.com/ajaxray">ajaxray</a></p>
+        <p>This project is maintained by <a href="https://github.com/ajaxray">ajaxray</a>.</p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Session Timer (Chrome Extension) by ajaxray</title>
 
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width">
@@ -21,14 +22,22 @@
           <img src="img/timer.png" alt="Logo" id="logo">
           Session Timer
         </h1>
-        <p>A <b>Chrome Extension</b> to rescue your time by notifying at a configured time limit while browsing <i>time killing</i> sites.</p>
+        <p>
+            A <b>Chrome Extension</b> to rescue your time by notifying after
+            customizable time limit while browsing
+            <i class="text-danger">time killing</i> sites.
+        </p>
 
         <!--<p class="view"><a href="https://github.com/ajaxray/session-timer">View the Project on GitHub <small>ajaxray/session-timer</small></a></p>-->
 
-        <ul id="download">
-          <li><a href="#">Download <strong>CRX File</strong></a></li>
-          <li><a href="#">Install from<strong>Chrome Store</strong></a></li>
-        </ul>
+        <!--<ul id="download">-->
+          <!--<li><a href="#">Download <strong>CRX File</strong></a></li>-->
+          <!--<li><a href="#">Install from<strong>Chrome Store</strong></a></li>-->
+        <!--</ul>-->
+        <p>
+            <a href="https://chrome.google.com/webstore/detail/session-timer/cjcdnfldekanlknfgfepfjcnniplodhc" target="_blank">
+                <img src="img/ChromeWebStore_Badge.png" alt="Download" class="img-thumbnail"></a>
+        </p>
 
         <p id="menu">
             <a href="index.html">&rang; How to use</a><br>
@@ -42,10 +51,11 @@
         <a id="welcome-to-session-timer" class="anchor" href="#welcome-to-session-timer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
         <h3>The extension of rescuing productivity - Session Timer</h3>
         <hr>
-        <p class="lead text-center">
-            This extension will <strong>rescue your time</strong> by notifying you
-            at a configured time limit while browsing <i class="text-danger">time killing</i> sites.
-        </p>
+          <p class="lead text-center">
+              This extension will <strong>rescue your time</strong> by notifying you
+              after customizable time limit while browsing
+              <i class="text-danger">time killing</i> sites.
+          </p>
         <hr>
         <h3>How to use?</h3>
         <p>
@@ -67,7 +77,7 @@
         <p>
             <b>Step 2: Get Notified!</b><br>
             A notification will be displayed with a light, short alarm sound when your time for browsing
-            watch-listed sites is over. In that notification, you'll have 2 buttons to choose -
+             a listed site is over. In that notification, you'll have 2 buttons to choose -
         </p>
         <ul class="list-unstyled">
             <li><b>Snooze :</b> Reset alarm at a few minutes later.</li>
@@ -81,12 +91,12 @@
         <p>
             <b>Step 3: Configure time limits (OPTIONAL).</b><br>
             By default, first notification will be displayed after 10 minutes of starting browsing a listed site.
-            And, if you choose to <b>Snooze</b> from notification, the alarm will reset at 2 minutes. But you can change these time limits
-            from <em>Settings page</em> (at the bottom of extension popup). You'll get the following options there to configure -
+            And, if you choose to <b>Snooze</b> in notification, the alarm will reset at 2 minutes. But you can change these time limits
+            from <em>Settings page</em> (at the bottom of extension popup). You'll get the following options to configure -
         </p>
         <ul class="list-unstyled">
             <li><b>Session Limit :</b> The time of showing first Notification (in minutes).</li>
-            <li><b>Snooze Time :</b> When to set next alarm if you choose to "Snooze"  (in minutes).</li>
+            <li><b>Snooze Time :</b> When to set next alarm if Snoozed  (in minutes).</li>
         </ul>
   
         <p><b>That's All!</b><br>
@@ -98,7 +108,7 @@
       </section>
       
       <footer>
-        <p>This project is maintained by <a href="https://github.com/ajaxray">ajaxray</a></p>
+        <p>This project is maintained by <a href="https://github.com/ajaxray">ajaxray</a>.</p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
