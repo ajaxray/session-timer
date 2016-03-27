@@ -24,6 +24,7 @@
     "activeTab",
     "storage",
     "alarms",
-    "notifications"
+    "notifications",
+    "http://ajaxray.com/"
   ]
 }

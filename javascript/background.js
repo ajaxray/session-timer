@@ -26,14 +26,14 @@ function startSession(siteUrl)
 {
     runningSessions.push(siteUrl);
     chrome.alarms.create(siteUrl, {"delayInMinutes": sessionLimit});
-    localStorage.setItem('runningSessions', runningSessions);
+    //localStorage.setItem('runningSessions', runningSessions);
 }
 
 function endSession(siteUrl)
 {
     runningSessions.splice(runningSessions.indexOf(siteUrl), 1);
     chrome.alarms.clear(siteUrl);
-    localStorage.setItem('runningSessions', runningSessions);
+    //localStorage.setItem('runningSessions', runningSessions);
 }
 
 function updateSessions(tab) {

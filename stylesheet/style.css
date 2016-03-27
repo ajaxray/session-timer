@@ -25,6 +25,7 @@ body.browser_action #toolbelt {
     border-top: 1px solid #dddddd;
     font-size: 85%;
     text-align: center;
+    color: #cccccc;
 }
 body.browser_action .container {
     width: 400px;

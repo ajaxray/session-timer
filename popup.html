@@ -12,7 +12,7 @@
     <div class="container">
         <h3><img src="img/timer.png" alt="Logo" id="logo"> Session Timer</h3>
         <hr>
-
+        <h5>Watchlist</h5>
         <div class="list-group" id="domains"></div>
     </div>
 
@@ -20,18 +20,20 @@
     <div class="footer">
         <div class="container">
             <div class="row" id="watch-row">
-                <div class="col-xs-10">
-                    Watching <strong><code class="domain"></code></strong>
+                <div class="col-xs-8">
+                    <strong><code class="domain"></code></strong>
                 </div>
-                <div class="col-xs-2 text-right">
-                    <input id="watch-state" type="checkbox" data-toggle="toggle" data-size="mini">
+                <div class="col-xs-4 text-right">
+                    <input id="watch-state" type="checkbox" data-toggle="toggle" data-size="mini"
+                           data-on="Watching... " data-off="Add to Watchlist" data-width="110" data-height="22">
                 </div>
             </div>
 
             <div class="row" id="nav">
                 <div class="col-xs-12" id="toolbelt">
-                    &#x1F6E0;<a href="options.html" tabindex="-1" target="_blank">settings</a>
-                    &#x1F4A1;<a href="howto.html" tabindex="-1" target="_blank">help</a>
+                    &#x1F6E0;<a href="options.html" tabindex="-1" target="_blank"> settings</a> |
+                    &#x1F4A1;<a href="howto.html" tabindex="-1" target="_blank"> help</a>
+                    <span id="message"></span>
                 </div>
             </div>
         </div>

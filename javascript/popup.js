@@ -9,7 +9,7 @@ function renderSiteList(items)
 {
     $('#domains').empty();
 
-    var sessions = localStorage.getItem('runningSessions') || [];
+    var sessions = chrome.extension.getBackgroundPage().runningSessions;
     if(items.length) {
         $.each(items, function (index, value) {
             var className = (sessions.indexOf(value) != -1) ? "list-group-item-warning" : "";
@@ -30,7 +30,7 @@ function setWatchState(list, currentUrl)
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
+$(window.document).ready(function() {
     withCurrentTab(function(tab) {
         currentUrl = getSiteUrl(tab.url);
         var domain = parseUrl(tab.url).hostname.substr(0, 30);
@@ -53,4 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    $('#message').load('http://ajaxray.com/chromeext/session-timer/message.php');
 });
