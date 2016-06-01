@@ -3,8 +3,8 @@ var watchList = [],
     currentSite = '',
     buzz = new Audio(),
     sessionLimit = 10,
-    activeSnoozeTime = 2,
-    passiveSnoozeTime = 2;
+    activeSnoozeTime = 2,   // Snoozed 
+    passiveSnoozeTime = 1;
 
 function inWatchList(siteUrl)
 {
